@@ -1,0 +1,8 @@
+管理员在成功登陆后，管理员模块的主要功能是订单管理、类目管理、商品管理、库存管理、用户管理和管理员管理。
+以下为管理员模块的实现：
+1.用户在进入系统后，首先进行信息的登录，之后前端界面会将用户username以password参数的形式提交给后台Servlet。若用户登录信息出错会让你重新登录。
+2.Servlet的service()方法中传入了两个参数，HttpServletRequest和HttpServletResponse，当Servlet收到前端界面的请求后，Servlet调用req对象的getParameter()方法获取用户的username和password。
+3. Servlet调用comDao中的selectByTechearId()方法，根据用户Id查询出所选教师信息，并保存在ArrayList中。
+4.Servlet调用session对象的setAttribute()方法，将保存在ArrayList中的订单管理、类目管理、商品管理、库存管理、用户管理和管理员管理发送给前端界面。
+
+ 
